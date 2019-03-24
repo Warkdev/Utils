@@ -38,7 +38,14 @@ public class FlagUtils {
         return (short) (flags >> (8 * (pos-1)) & 0xFF);
     }
     
-    public static short setByte(short field, int pos, byte value) {
+    /**
+     * Set the byte value at the given position.
+     * @param field The original value.
+     * @param pos The position of the byte to be updated.
+     * @param value The new value for the given byte.
+     * @return A short (2-bytes size) primitive updated with the provided value
+     */
+    public static short setByte(short field, int pos, short value) {
         if(pos < 1 || pos > 2) {
             throw new IllegalArgumentException("Pos value is not defined between 1 and 2");
         }        

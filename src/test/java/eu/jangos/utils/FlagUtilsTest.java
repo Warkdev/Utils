@@ -17,12 +17,10 @@
  */
 package eu.jangos.utils;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Assertions;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
@@ -31,28 +29,12 @@ import static org.junit.jupiter.api.Assertions.*;
 public class FlagUtilsTest {
     
     public FlagUtilsTest() {
-    }
-
-    @org.junit.jupiter.api.BeforeAll
-    public static void setUpClass() throws Exception {
-    }
-
-    @org.junit.jupiter.api.AfterAll
-    public static void tearDownClass() throws Exception {
-    }
-
-    @org.junit.jupiter.api.BeforeEach
-    public void setUp() throws Exception {
-    }
-
-    @org.junit.jupiter.api.AfterEach
-    public void tearDown() throws Exception {
     }   
 
     /**
      * Test of getByte method, of class FlagUtils.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testGetByte_short_int() {
         System.out.println("getByte");        
         int flags = 260246804;
@@ -78,40 +60,64 @@ public class FlagUtilsTest {
     }
 
     /**
+     * Test of getByte method, of class FlagUtils.
+     * This test must fail.
+     */
+    @Test
+    public void testGetByteOutOfRange() {
+        System.out.println("testGetByteOutOfRange");
+        
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            FlagUtils.getByte(0, -1);            
+        });
+        
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            FlagUtils.getByte(0, 5);            
+        });
+    }
+    
+    /**
      * Test of setByte method, of class FlagUtils.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testSetByte_3args_1() {
         System.out.println("setByte");
-        short field = 0;
-        int pos = 0;
-        byte value = 0;
-        short expResult = 0;
+        short field = 255;
+        int pos = 1;
+        short value = 127;
+        short expResult = 127;
         short result = FlagUtils.setByte(field, pos, value);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        field = 255;
+        pos = 2;
+        value = 255;
+        expResult = -1;
+        result = FlagUtils.setByte(field, pos, value);
+        assertEquals(expResult, result);
     }
 
     /**
      * Test of getByte method, of class FlagUtils.
+     * This test must fail.
      */
-    @org.junit.jupiter.api.Test
-    public void testGetByte_int_int() {
-        System.out.println("getByte");
-        int flags = 0;
-        int pos = 0;
-        short expResult = 0;
-        short result = FlagUtils.getByte(flags, pos);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    @Test
+    public void testSetByteOutOfRange() {
+        System.out.println("testSetByteOutOfRange");
+        
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            FlagUtils.setByte((short) 0, (short) -1, (short) 0);            
+        });
+        
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            FlagUtils.setByte((short) 0, (short) 3, (short) 0);            
+        });
     }
 
     /**
      * Test of setByte method, of class FlagUtils.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testSetByte_3args_2() {
         System.out.println("setByte");
         int field = 0;
@@ -127,7 +133,7 @@ public class FlagUtilsTest {
     /**
      * Test of getByte method, of class FlagUtils.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testGetByte_long_int() {
         System.out.println("getByte");
         long flags = 0L;
@@ -142,7 +148,7 @@ public class FlagUtilsTest {
     /**
      * Test of setByte method, of class FlagUtils.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testSetByte_3args_3() {
         System.out.println("setByte");
         long field = 0L;
@@ -158,7 +164,7 @@ public class FlagUtilsTest {
     /**
      * Test of hasFlag method, of class FlagUtils.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testHasFlag_byte_byte() {
         System.out.println("hasFlag");
         byte field = 0;
@@ -173,7 +179,7 @@ public class FlagUtilsTest {
     /**
      * Test of hasFlag method, of class FlagUtils.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testHasFlag_short_short() {
         System.out.println("hasFlag");
         short field = 0;
@@ -188,7 +194,7 @@ public class FlagUtilsTest {
     /**
      * Test of hasFlag method, of class FlagUtils.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testHasFlag_int_int() {
         System.out.println("hasFlag");
         int field = 0;
@@ -203,7 +209,7 @@ public class FlagUtilsTest {
     /**
      * Test of hasFlag method, of class FlagUtils.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testHasFlag_long_long() {
         System.out.println("hasFlag");
         long field = 0L;
@@ -218,7 +224,7 @@ public class FlagUtilsTest {
     /**
      * Test of isSet method, of class FlagUtils.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testIsSet_byte_int() {
         System.out.println("isSet");
         byte field = 0;
@@ -233,7 +239,7 @@ public class FlagUtilsTest {
     /**
      * Test of isSet method, of class FlagUtils.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testIsSet_short_int() {
         System.out.println("isSet");
         short field = 0;
@@ -248,7 +254,7 @@ public class FlagUtilsTest {
     /**
      * Test of isSet method, of class FlagUtils.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testIsSet_int_int() {
         System.out.println("isSet");
         int field = 0;
@@ -263,7 +269,7 @@ public class FlagUtilsTest {
     /**
      * Test of isSet method, of class FlagUtils.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testIsSet_long_int() {
         System.out.println("isSet");
         long field = 0L;
@@ -278,7 +284,7 @@ public class FlagUtilsTest {
     /**
      * Test of setFlag method, of class FlagUtils.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testSetFlag_3args_1() {
         System.out.println("setFlag");
         byte field = 0;
@@ -294,7 +300,7 @@ public class FlagUtilsTest {
     /**
      * Test of setFlag method, of class FlagUtils.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testSetFlag_3args_2() {
         System.out.println("setFlag");
         short field = 0;
@@ -310,7 +316,7 @@ public class FlagUtilsTest {
     /**
      * Test of setFlag method, of class FlagUtils.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testSetFlag_3args_3() {
         System.out.println("setFlag");
         int field = 0;
@@ -326,7 +332,7 @@ public class FlagUtilsTest {
     /**
      * Test of setFlag method, of class FlagUtils.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testSetFlag_3args_4() {
         System.out.println("setFlag");
         long field = 0L;
