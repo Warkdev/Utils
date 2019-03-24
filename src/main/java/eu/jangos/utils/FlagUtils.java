@@ -76,7 +76,14 @@ public class FlagUtils {
         return (short) (flags >> (8 * (pos-1)) & 0xFF);
     }  
     
-    public static int setByte(int field, int pos, byte value) {
+    /**
+     * Set the byte value at the given position.
+     * @param field The original value.
+     * @param pos The position of the byte to be updated.
+     * @param value The new value for the given byte.
+     * @return An integer (4-bytes size) primitive updated with the provided value
+     */
+    public static int setByte(int field, int pos, short value) {
         if(pos < 1 || pos > 4) {
             throw new IllegalArgumentException("Pos value is not defined between 1 and 4");
         }        
@@ -112,7 +119,14 @@ public class FlagUtils {
         return (short) (flags >> (8 * (pos-1)) & 0xFF);
     }           
     
-    public static long setByte(long field, int pos, byte value) {
+    /**
+     * Set the byte value at the given position.
+     * @param field The original value.
+     * @param pos The position of the byte to be updated.
+     * @param value The new value for the given byte.
+     * @return A long (8-bytes size) primitive updated with the provided value
+     */
+    public static long setByte(long field, int pos, short value) {
         if(pos < 1 || pos > 8) {
             throw new IllegalArgumentException("Pos value is not defined between 1 and 8");
         }        
@@ -144,7 +158,7 @@ public class FlagUtils {
                 break;
         }
         
-        return (field | (value << (8* (pos-1))));
+        return (field | (((long) value) << (8* (pos-1))));
     }
     
     /**
