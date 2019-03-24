@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"eu.jangos.utils","l":"FlagsHelper"},{"p":"eu.jangos.utils","l":"FlagUtils"}]
