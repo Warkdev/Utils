@@ -10,5 +10,5 @@ You should have received a copy of the GNU General Public License along with thi
 
 The full license is included in the file License.md.
 
-[1]: https://travis-ci.org/Warkdev/Utils "Travis CI · JaNGOS Utils build status"
+[1]: https://travis-ci.com/Warkdev/Utils "Travis CI · JaNGOS Utils build status"
 [2]: http://warkdev.github.io/Utils/apidocs/ "JaNGOS Utils javadoc"
