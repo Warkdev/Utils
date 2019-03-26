@@ -1,4 +1,4 @@
-# Utils  [![Build status](https://travis-ci.org/Warkdev/Utils.png)][1]
+# Utils  [![Build status](https://travis-ci.org/Warkdev/Utils.png)][1] [![Jit](https://jitpack.io/v/warkdev/Utils.svg)][3]
 Utils provides basic, cross-modules capabilities to handle WoW parsed data. See the [Javadoc][2] for more information.
 
 # License
@@ -12,3 +12,4 @@ The full license is included in the file License.md.
 
 [1]: https://travis-ci.com/Warkdev/Utils "Travis CI · JaNGOS Utils build status"
 [2]: http://warkdev.github.io/Utils/apidocs/ "JaNGOS Utils javadoc"
+[3]: https://jitpack.io/#warkdev/Utils "JaNGOS Utils Jitpack"
