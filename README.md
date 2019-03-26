@@ -1,4 +1,4 @@
-# Utils  [![Build status](https://travis-ci.org/Warkdev/Utils.png)][1] [![Jit](https://jitpack.io/v/warkdev/Utils.svg)][3]
+# Utils  [![Build status](https://travis-ci.org/Warkdev/Utils.png)][1] [![Jit](https://jitpack.io/v/warkdev/Utils.svg)][3] [![Coverage Status](https://coveralls.io/repos/github/Warkdev/Utils/badge.svg?branch=master)][4] [![Codebeat badge](https://codebeat.co/badges/5ccfd060-8d57-4a51-9c6b-2688482f857e)][5] [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FWarkdev%2FUtils.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FWarkdev%2FUtils?ref=badge_shield)
 Utils provides basic, cross-modules capabilities to handle WoW parsed data. See the [Javadoc][2] for more information.
 
 # License
@@ -13,3 +13,5 @@ The full license is included in the file License.md.
 [1]: https://travis-ci.com/Warkdev/Utils "Travis CI · JaNGOS Utils build status"
 [2]: http://warkdev.github.io/Utils/apidocs/ "JaNGOS Utils javadoc"
 [3]: https://jitpack.io/#warkdev/Utils "JaNGOS Utils Jitpack"
+[4]: https://coveralls.io/github/Warkdev/Utils?branch=master "JaNGOS Utils Coverage status"
+[5]: https://codebeat.co/projects/github-com-warkdev-utils-master "JaNGOS Utils Codebeat status"
