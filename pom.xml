@@ -31,6 +31,14 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
             </plugin>
+            <plugin>
+                <groupId>org.eluder.coveralls</groupId>
+                <artifactId>coveralls-maven-plugin</artifactId>
+                <version>4.3.0</version>
+                <configuration>
+                    <repoToken>Qigxp4GOq3m56QjHICu6U1rKoeYicyz1U</repoToken>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
     
