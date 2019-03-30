@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f42855f623b2400d8b21ffeb741c3e75)](https://app.codacy.com/app/Warkdev/Utils?utm_source=github.com&utm_medium=referral&utm_content=Warkdev/Utils&utm_campaign=Badge_Grade_Dashboard)
 # Utils  [![Build status](https://travis-ci.org/Warkdev/Utils.png)][1] [![Jit](https://jitpack.io/v/warkdev/Utils.svg)][3] [![Coverage Status](https://coveralls.io/repos/github/Warkdev/Utils/badge.svg?branch=master)][4] [![Codebeat badge](https://codebeat.co/badges/5ccfd060-8d57-4a51-9c6b-2688482f857e)][5] [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FWarkdev%2FUtils.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FWarkdev%2FUtils?ref=badge_shield)
 Utils provides basic, cross-modules capabilities to handle WoW parsed data. See the [Javadoc][2] for more information.
 
